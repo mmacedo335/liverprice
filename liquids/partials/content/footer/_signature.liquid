@@ -1,0 +1,29 @@
+{% load_banners position: 'rodape-infos-loja' %}
+
+<div class="signature">
+  {% for banner in loaded_banners limit: 1 %}
+    <p>
+      {{ banner.subtitle }}
+    </p>
+  {% endfor %}
+
+  <p>
+    <a aria-label="Ir para o site da Vnda" href="//www.vnda.com.br" rel="noopener" target="_blank">
+      Vnda - Tecnologia em E-commerce
+    </a>
+  </p>
+
+  <p>
+    <a href="https://agenciafg.com.br/" target="_blank">
+      <img src="{{ 'logo-fg.svg' | image_path }}">
+    </a>
+  </p>
+</div>
+
+
+<div class="whats-flutuate">
+  <a href="https://api.whatsapp.com/send/?phone=5511917491506&text&type=phone_number&app_absent=0" target="blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="77" height="76" viewBox="0 0 77 76" fill="none"><g filter="url(#filter0_d_118_1852)"><circle cx="36.75" cy="34" r="30" fill="#38B923"></circle><g clip-path="url(#clip0_118_1852)"><path d="M43.937 36.1489C43.8787 36.1219 41.6951 35.088 41.3071 34.9538C41.1487 34.8991 40.979 34.8457 40.7985 34.8457C40.5036 34.8457 40.2559 34.987 40.063 35.2645C39.8449 35.5762 39.1846 36.3184 38.9805 36.5401C38.9539 36.5694 38.9175 36.6043 38.8957 36.6043C38.8762 36.6043 38.5383 36.4705 38.436 36.4278C36.0936 35.4494 34.3156 33.0967 34.0718 32.7C34.037 32.6429 34.0355 32.617 34.0353 32.617C34.0438 32.5868 34.1226 32.5109 34.1632 32.4717C34.2822 32.3586 34.411 32.2094 34.5357 32.0652C34.5947 31.9968 34.6538 31.9284 34.7119 31.8638C34.8928 31.6615 34.9733 31.5044 35.0667 31.3224L35.1156 31.2279C35.3435 30.7924 35.1488 30.425 35.0859 30.3063C35.0343 30.207 34.1123 28.0674 34.0142 27.8426C33.7785 27.3002 33.467 27.0476 33.0342 27.0476C32.994 27.0476 33.0342 27.0476 32.8658 27.0544C32.6607 27.0628 31.5438 27.2041 31.05 27.5035C30.5263 27.8209 29.6404 28.8328 29.6404 30.6124C29.6404 32.2141 30.6975 33.7264 31.1513 34.3016C31.1626 34.3161 31.1833 34.3455 31.2133 34.3878C32.9514 36.8285 35.1182 38.6373 37.3147 39.481C39.4293 40.2932 40.4307 40.3871 41 40.3871C41.0001 40.3871 41.0001 40.3871 41.0001 40.3871C41.2393 40.3871 41.4308 40.369 41.5997 40.353L41.7069 40.3432C42.4374 40.2809 44.0427 39.4811 44.4079 38.5053C44.6955 37.7368 44.7714 36.8971 44.58 36.5924C44.4489 36.3852 44.223 36.2809 43.937 36.1489Z" fill="white"></path><path d="M37.0161 19.6C28.9042 19.6 22.3047 25.898 22.3047 33.6393C22.3047 36.1431 23.0015 38.594 24.3216 40.7391L21.7949 47.9059C21.7478 48.0395 21.7828 48.1872 21.8856 48.2879C21.9598 48.3607 22.0605 48.4 22.1633 48.4C22.2026 48.4 22.2423 48.3943 22.281 48.3824L30.053 46.0077C32.1798 47.1003 34.5835 47.6771 37.0162 47.6771C45.1274 47.6772 51.7263 41.3798 51.7263 33.6393C51.7263 25.898 45.1274 19.6 37.0161 19.6ZM37.0161 44.7527C34.727 44.7527 32.5099 44.1171 30.6041 42.9146C30.54 42.8741 30.4656 42.8534 30.3907 42.8534C30.3511 42.8534 30.3115 42.8592 30.2729 42.8709L26.3796 44.0609L27.6364 40.4956C27.677 40.3802 27.6567 40.2529 27.5818 40.1546C26.1305 38.2478 25.3634 35.9949 25.3634 33.6393C25.3634 27.5106 30.5908 22.5245 37.016 22.5245C43.4406 22.5245 48.6674 27.5106 48.6674 33.6393C48.6675 39.7673 43.4407 44.7527 37.0161 44.7527Z" fill="white"></path></g></g><defs><filter id="filter0_d_118_1852" x="0.75" y="0" width="76" height="76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dx="2" dy="4"></feOffset><feGaussianBlur stdDeviation="4"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_118_1852"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_118_1852" result="shape"></feBlend></filter><clipPath id="clip0_118_1852"><rect width="29.952" height="28.8" fill="white" transform="translate(21.774 19.6)"></rect></clipPath></defs></svg>
+  </a>
+</div>
+  

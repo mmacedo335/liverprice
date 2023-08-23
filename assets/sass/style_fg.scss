@@ -1,0 +1,114 @@
+.mm-menu-mobile{
+    .mm-menu-logo{
+        background: #92060f;
+    }
+    button.mm-menu-close{
+        color: white;
+    }
+}
+
+#header{
+    button.hamburger{
+        color: white;
+    }   
+}
+
+.icons{
+    .item{
+        img{
+            max-width: 60px;
+        }
+        .text{
+            p{
+                color: black;
+            }
+        }
+    }
+}
+
+.categories{
+    .category-item{
+        border: 2px solid #92060f;
+        padding: 10px;
+    }
+} 
+
+.section.products.carousel{
+    .header{
+        .title{
+            color: black;
+        }
+        a{
+            color: black;
+            border: 1px solid black;
+        }
+    }
+} 
+
+.button-default:hover, #cart-drawer-el .card-drawer-cta:hover{
+    background: green;
+    border: none;
+}
+
+.whats-flutuate {
+    position: fixed;
+    right: 5px;
+    z-index: 9999; 
+    margin: auto;
+    top: unset;
+    bottom: 5px
+}
+
+.pagina-institucional{
+    margin-top: 40px;
+    color: black;
+}
+
+.vnda-products-filter-horizontal-sort-header{
+    max-width: 250px;
+}  
+
+body .menu .menu-list .menu-list-item.has-submenu > .submenu > .content > .submenu-list .submenu-list-item .sub-list .sub-list-item a {
+  margin: 0;
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  display: inline-block;
+}
+body .menu .menu-list .menu-list-item.has-submenu > .submenu > .content > .submenu-list .submenu-list-item .sub-list .sub-list-item a:hover {
+  border: 2px solid #92060f;
+}
+body .menu .menu-list .menu-list-item.has-submenu > .submenu > .content > .submenu-list .submenu-list-item .submenu-title:hover {
+  border: 2px solid #92060f;
+}
+body .menu .menu-list .menu-list-item.has-submenu > .submenu > .content > .submenu-list .submenu-list-item .submenu-title {
+  margin: 0;
+  border: 2px solid transparent;
+  padding: 5px 10px;
+  display: inline-block;
+}
+body .section-list-products .pagination {
+  margin: 60px auto 0px auto;
+}
+body .vnda-products-filter-horizontal-properties-container.component-products-filter-py-4 {
+  display: block !important;
+}
+body .product-section .attributes > .prod-option .label[data-text="193x203"] {
+  order: -1;
+}
+body .product-section .attributes > .prod-option .label[data-text="158x198"] {
+  order: -2;
+}
+body .product-section .attributes > .prod-option .label[data-text="138x188"] {
+  order: -3;
+}
+body .product-section .attributes > .prod-option .label[data-text="108x198"] {
+  order: -4;
+}
+body .product-section .attributes > .prod-option .label[data-text="88x188"] {
+  order: -5;
+}
+ 
+.short-description{
+  margin: 40px 0px; 
+}
+

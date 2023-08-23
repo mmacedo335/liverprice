@@ -1,0 +1,126 @@
+.filter-container {
+  width: 100%;
+  margin-bottom: 6rem;
+  
+  // estilo componente de filtro
+  #component-products-filter-root {
+    width: 100%;
+
+    .component-products-filter-text-sm {
+      font-size: 1.2rem;
+    }
+
+    .vnda-products-filter-horizontal-wrapper {
+      gap: 1.714rem;
+      overflow-x: initial;
+      justify-content: flex-start !important;
+      flex-direction: column;
+      @include media('md') {
+        flex-direction: row;
+      }
+    }
+
+    .vnda-products-filter-horizontal-tags-container,
+    .vnda-products-filter-horizontal-properties-container,
+    .vnda-products-filter-price-filter-container,
+    .vnda-products-filter-horizontal-sort-container {
+      flex: 1;
+      position: relative;
+    }
+
+    .vnda-products-filter-horizontal-tags-header,
+    .vnda-products-filter-horizontal-properties-header,
+    .vnda-products-filter-price-filter-header,
+    .vnda-products-filter-horizontal-sort-header {
+      border: 1px solid var(--highlight-1);
+      padding: 1.2rem;
+      cursor: pointer;
+
+      &-title {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      img {
+        filter: invert(21%) sepia(66%) saturate(2515%) hue-rotate(335deg)
+          brightness(94%) contrast(91%);
+      }
+    }
+
+    .vnda-products-filter-horizontal-tags-content,
+    .vnda-products-filter-horizontal-properties-content,
+    .vnda-products-filter-price-filter-content,
+    .vnda-products-filter-horizontal-sort-content {
+      width: 100%;
+      border-radius: 0px 0px 4px 4px;
+      filter: drop-shadow(0px 4px 16px rgba(81, 95, 103, 0.08));
+
+      .list-value-container {
+        padding: 1.6rem;
+        margin: 0;
+        color: var(--highlight-1);
+
+        &.component-products-filter-label-selected {
+          border: 2px solid var(--highlight-1);
+          background-color: #f5f5fb;
+        }
+
+        .list-value-image {
+          display: none;
+        }
+      }
+
+      .color-value-container {
+        padding: 1.6rem;
+        margin: 0;
+        color: var(--highlight-1);
+        border: 2px solid transparent;
+
+        &.component-products-filter-label-selected {
+          border-color: #c0bfd6;
+          background-color: #f5f5fb;
+        }
+
+        .color-value-image {
+          display: none;
+        }
+      }
+    }
+
+    .vnda-products-filter-price-filter-content {
+      padding: 1.6rem;
+      background-color: var(--white);
+
+      .component-products-filter-bg-blue-300 {
+        background-color: var(--highlight-1);
+      }
+    }
+
+    .vnda-products-filter-horizontal-buttons {
+      display: none;
+    }
+
+    .component-products-filter-pr-2 {
+      padding-right: 0;
+    }
+
+    .component-products-filter-ml-4 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .component-products-filter-ml-2 {
+      margin-left: 0;
+    }
+
+    .component-products-filter-py-4 {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .component-products-filter-my-4 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<div class="actions">
+  <div class="search">
+    <form action="{{ search_url }}">
+      <button aria-label="Botão de pesquisa" class="search-icon" data-action="show-form-search">
+        <svg class="icon">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+      </button>
+      <input name="q" placeholder="Buscar" required type="search"/>
+    </form>
+  </div>
+
+  <div class="account">
+    <a aria-label="Minha Conta" href="{{ account_url }}">
+      <svg class="icon">
+        <use xlink:href="#icon-account"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="cart">
+    <button aria-label="Abrir carrinho" class="btn-cart" data-toggle-cart type="button">
+      <svg class="icon">
+        <use xlink:href="#icon-cart"/>
+      </svg>
+      <span class="count" data-cart-count>
+        0
+      </span>
+    </button>
+  </div>
+</div>

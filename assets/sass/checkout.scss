@@ -1,0 +1,20 @@
+@import "base/variables";
+@import "fonts";
+
+html {
+  font-size: var(--font-size-big); 
+}
+
+#wrapper {
+  --font-sans: "Roboto", sans-serif;
+  --color-highlight: #828080;
+} 
+
+#wrapper .cta-button {
+  @extend .btn-primary !optional;
+}
+
+#wrapper .logo {
+  max-width: 150px;
+  object-fit: contain;
+}

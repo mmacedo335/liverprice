@@ -1,0 +1,43 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.page-account {
+  .logout a {
+    margin-top: 2rem;
+    margin-left: auto;
+    width: 9rem;
+    height: 2.9rem;
+    background-color: var(--highlight-1);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--white);
+    transition: 0.3s;
+    &:hover {
+      background-color: var(--highlight-2);
+    }
+  }
+  .account-wrapper {
+    margin-bottom: 3.571rem;
+
+    .vndaAccountWidgetRow {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .vndaAccountWidgetCol {
+        width: 40%;
+        margin-right: 2.143rem;
+        flex: auto !important;
+
+        &:last-child {
+          margin-right: 0;
+          width: calc(60% - 30px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+# Documentação: https://gitlab.com/vnda/setup/cadastros
+
+stages:
+  - clone
+  - build
+  - deploy
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+cadastros:
+  image: node:12.16.2
+  stage: clone
+  artifacts:
+    paths:
+      - template6.wiki
+      - public
+      - .marprc.json
+  only:
+    changes:
+      - "template6.wiki"
+  script:
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.com/vnda/setup/cadastros.git
+    - mkdir public
+    - cp -R -i cadastros/images public/images
+    - cp -R -i cadastros/javascripts/ public/javascripts
+    - cp -R -i cadastros/stylesheets/ public/stylesheets
+    - cp -R -i cadastros/generateTable.js .
+    - cp -R -i cadastros/.marprc.json .
+    - cp -R -i assets/images/prints/* public/images
+    - touch $CI_PROJECT_NAME.wiki/TABLE.md
+    - node generateTable.js
+
+marpit:
+  image: node:12.16.2
+  stage: build
+  artifacts:
+    paths:
+      - public
+  only:
+    changes:
+      - "template6.wiki"
+  script:
+    - npm i @marp-team/marp-cli
+    - find $CI_PROJECT_NAME.wiki -name "*.md" ! -name "TABLE*" ! -name "index*" -print0 | sort -z | xargs -r0 cat > $CI_PROJECT_NAME.wiki/index.md
+    - cat $CI_PROJECT_NAME.wiki/TABLE.md $CI_PROJECT_NAME.wiki/index.md $CI_PROJECT_NAME.wiki/TABLE.md > public/index.md
+    - npx marp -c .marprc.json
+    - find public/index.html -type f -exec sed -i "s/<body/<body style=\"background:#f9f8f8\;\"/" {} \;
+    - find public/index.html -type f -exec sed -i "s/\/body/script src=\.\/javascripts\\/script.js><\/script><\/body/" {} \;
+
+pages:
+  image: alpine:latest
+  stage: deploy
+  script:
+    - echo 'Nothing to do...'
+  artifacts:
+    paths:
+      - public
+  only:
+    changes:
+      - "template6.wiki"

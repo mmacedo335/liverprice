@@ -1,0 +1,29 @@
+@import "../content/header/top_bar";
+@import "../content/header/desktop";
+@import "../content/header/mobile";
+
+#header {
+  background-color: #92060f;
+  position: sticky;
+  top: 0;
+  transition: var(--transition);
+  width: 100%;
+  z-index: 20;
+
+  > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1440px;
+  }
+
+  > .container .hamburger {
+    @include media('md') {
+      display: none;
+    }
+  }
+
+  @import "../content/header/logo";
+  @import "../content/header/actions";
+}
